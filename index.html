@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поздравительный сайт для мамы</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #d77a00, #e29600);
+            color: #FFFFFF;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        .header {
+            position: relative;
+            padding: 20px;
+        }
+        .wheel-container {
+            margin: 20px auto;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            border: 10px solid #9b0d0d;
+            position: relative;
+            overflow: hidden;
+        }
+        .wheel {
+            width: 100%;
+            height: 100%;
+            background: conic-gradient(#d15250 0% 50%, #e585bc 50% 100%);
+            position: absolute;
+            transition: transform 4s cubic-bezier(0.33, 1, 0.68, 1);
+            border-radius: 50%;
+        }
+        .spin-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ef9d05;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #010000;
+        }
+        .question {
+            font-size: 24px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .label {
+            position: absolute;
+            font-size: 26px;
+            text-align: center;
+            width: 100%;
+            top: calc(50% - 10px); /* Выравнивание по вертикали */
+            color: black; /* Чёрный цвет текста */
+            transition: transform 4s; /* Вращение вместе с колесом */
+        }
+        .yes {
+            transform: rotate(0deg); /* Позиция "Да" */
+            left: 100px; /* Отступ  */
+        }
+        .no {
+            transform: rotate(180deg); /* Позиция "Нет" */
+            right: 100px; /* Отступ */
+        }
+        .message {
+            margin-top: 30px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .quiz {
+            margin-top: 100px;
+            background:linear-gradient(to bottom, #f22d05, #111200);
+        }
+        .photo-gallery {
+            margin-top: 100px;
+            height: 42;
+            width: 42;
+        }
+        .love-message {
+            font-size: 24px;
+            margin-top: 50px;
+            white-space: pre-line;
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+        }
+        .flowers {
+            width: 200px;
+            position: absolute;
+            top: 260%;
+            transform: translateY(-50%);
+        }
+        .flowers.left {
+            left: 0;
+            
+        }
+        .flowers.right {
+            right: 0;
+        }
+        .mama-young {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .young-photos ul {
+            list-style: none;
+            padding: 0;
+        }
+        .young-photos li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Заголовок сайта -->
+    <div class="header">
+        <div class="message">СЕГОДНЯ НЕ ТОЛЬКО ДЕНЬ ВСЕЙ СТРАНЫ,НО И ТВОЙ!</div>
+        <img src="c:\Users\HP\Downloads\25204368.gif" alt="GIF изображение">
+    </div>
+
+</body>
+</html>
+
+<div class="love-icons">
+    💖💋 💖💋 💖💋 💖💋💖💋 💖💋 💖💋 💖💋💖💋💖💋 💖💋 💖💋 💖💋💖💋 💖💋 💖💋 💖💋💖💋 💖💋 💖💋 💖💋💖💋 💖💋 💖💋  💖💋 💖💋 💖💋💖💋 💖💋 💖💋 💖💋
+    <div class="wheel-container">
+        <div class="wheel" id="wheel">
+            <div class="label yes">Да</div>
+            <div class="label no">Нет</div>
+        </div>
+    </div>
+    <div class="question">Мама стареет?</div>
+    <button class="spin-btn" onclick="spinWheel()">Крутить!</button>
+    <div class="result" id="result"></div> 
+    
+    <script>
+        function spinWheel() {
+            const wheel = document.getElementById('wheel');
+            const resultElement = document.getElementById('result');
+            
+            // Установим угол поворота на 6 полных оборотов (6 * 360 = 2160 градусов)
+            wheel.style.transform = 'rotate(2160deg)'; 
+    
+            // Установим результат через 4 секунды, чтобы совпадало с анимацией
+            setTimeout(() => {
+                resultElement.textContent = 'Нет';
+            }, 4000); // Задержка 4 секунды
+        }
+    </script>
+    
+    </body>
+    </html>
+
+</script>
+
+         <!-- Ссылка на любимые песни -->
+    <div class="favorite-songs">
+        <h3>Любимые песни мамы на день рождения:</h3>
+        <ul>
+            <li>
+                <a href="#" onclick="playAudio('song1')">день победы</a>
+                <audio id="song1" src="c:\Users\HP\AppData\Roaming\Telegram Desktop\день победы.mp3"></audio>
+            </li>
+            <div class="love-icons">
+                 💖💋 💖💋💖💋 💖💋 💖💋
+          <li>
+                <a href="#" onclick="playAudio('song2')">землянка</a>
+                <audio id="song2" src="c:\Users\HP\AppData\Roaming\Telegram Desktop\землянка.mp3"></audio>
+            </li>
+            <div class="love-icons">
+                💖💋 💖💋💖💋 💖💋 💖💋
+            <li>
+                <a href="#" onclick="playAudio('song3')">смуглянка</a>
+                <audio id="song3" src="c:\Users\HP\AppData\Roaming\Telegram Desktop\смуглянка.mp3"></audio>
+            </li>
+            <div class="love-icons">
+                💖💋 💖💋💖💋 💖💋 💖💋
+            <li>
+                <a href="#" onclick="playAudio('song4')">курск</a>
+                <audio id="song4" src="c:\Users\HP\AppData\Roaming\Telegram Desktop\курск.mp3"></audio>
+            </li>
+            </ul>
+        </div>
+    
+        <!-- Викторина -->
+        <div class="quiz">
+            <h3>Сколько моей маме лет?</h3>
+            <button onclick="checkAnswer(1)">10</button>
+            <button onclick="checkAnswer(2)">Секрет</button>
+            <button onclick="checkAnswer(3)">43</button>
+            <div id="quiz-result"></div>
+        </div>
+    
+        <!-- Фотогалерея -->
+        <img src="c:\Users\HP\Downloads\25204368.gif" alt="GIF изображение">
+<div class="photo-gallery">
+    <h3>Наша семья</h3>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+        <img src="c:\Users\HP\AppData\Roaming\Telegram Desktop\халк.jpg" alt="" style="width:120px; height:auto;; object-fit: cover; border-radius: 5px; cursor: pointer;" />
+        <img src="c:\Users\HP\AppData\Roaming\Telegram Desktop\photo_2025-04-30_15-03-40.jpg" alt="" style="width:120px; height:auto; object-fit: cover; border-radius: 5px; cursor: pointer;" />
+        <img src="c:\Users\HP\AppData\Roaming\Telegram Desktop\photo_2025-04-30_15-03-29.jpg" alt="" style="width:120px; height:auto; object-fit: cover; border-radius: 5px; cursor: pointer;" />
+        <img src="c:\Users\HP\AppData\Roaming\Telegram Desktop\photo_2025-04-30_15-03-19.jpg" alt="" style="width:120px; height:auto; object-fit: cover; border-radius: 5px; cursor: pointer;" />
+        <img src="c:\Users\HP\AppData\Roaming\Telegram Desktop\photo_2025-04-30_15-03-12.jpg" alt="" style="width:120px; height:auto; object-fit: cover; border-radius: 5px; cursor: pointer;" />
+        <img src="c:\Users\HP\AppData\Roaming\Telegram Desktop\photo_2025-04-30_15-03-00.jpg" alt="" style="width:120px; height:auto; object-fit: cover; border-radius: 5px; cursor: pointer;" />
+        <img src="c:\Users\HP\AppData\Roaming\Telegram Desktop\photo_2025-04-30_15-02-54.jpg" alt="" style="width:120px; height:auto; object-fit: cover; border-radius: 5px; cursor: pointer;" />
+        <img src="c:\Users\HP\AppData\Roaming\Telegram Desktop\мвд.jpg" alt="" style="width:120px; height:auto; object-fit: cover; border-radius: 5px; cursor: pointer;" />
+        <img src="c:\Users\HP\AppData\Roaming\Telegram Desktop\обгимашки.jpg" alt="" style="width:120px; height:auto; object-fit: cover; border-radius: 5px; cursor: pointer;" />
+        <img src="c:\Users\HP\AppData\Roaming\Telegram Desktop\деда.jpg" alt="" style="width:120px; height:auto; object-fit: cover; border-radius: 5px; cursor: pointer;" />
+    </div>
+</div>
+    
+        <!-- Сообщение -->
+        <div>
+            <img src="c:\Users\HP\AppData\Roaming\Telegram Desktop\лилия 1.jpg" class="flowers left"> <!-- Укажите путь к изображению лилий -->
+            <div class="love-message" id="love-message">
+                В этот майский день я подарю тебе себя.<br>
+                Твои глаза, как небеса,<br>
+                Чисты и светлы, как весна.<br><br>
+                Твои русые волосы на солнце блестят,<br>
+                На ветру развиваются, заманить к себе хотят.<br><br>
+                Тебе сегодня 43, но выглядишь на 23.<br>
+                Ты — свет и тепло, ты — мудрость и радость,<br>
+                твое счастье дороже любого подарка,<br>
+                С тобой, любимая, вся жизнь, словно сказка.<br><br>
+                Пусть счастье светит, как зори восход,<br>
+                Забудь все невзгоды и солнца заход.<br>
+                С днем рождения, мама, с праздником весны,<br>
+                Ты — наше счастье, ты - подарок мечты.<br><br>
+                С любовью, приношу тебе в дар<br>
+                Тепло своих слов и душевный пожар.<br>
+                Пусть каждый момент приносит лишь свет,<br>
+                С тобой, дорогая, пусть будет успех!
+            </div>
+            <img src="c:\Users\HP\AppData\Roaming\Telegram Desktop\лилия 2.jpg" alt="Букет лилий" class="flowers right"> <!-- Укажите путь к изображению лилий -->
+        </div>
+    
+        <!-- Мамина молодость -->
+<div class="mama-young">Мамина молодость:</div>
+<div class="young-photos" style="margin-top: 10px;">
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+        <img src="c:\Users\HP\AppData\Roaming\Telegram Desktop\photo_2025-05-01_00-47-55.jpg" alt="С" style="width:120px; height:auto; object-fit: cover; border-radius: 5px; cursor: pointer;" />
+        <img src="c:\Users\HP\AppData\Roaming\Telegram Desktop\photo_2025-05-01_00-47-47.jpg" alt="ДНЕМ" style="width:120px; height:auto; object-fit: cover; border-radius: 5px; cursor: pointer;" />
+        <img src="c:\Users\HP\AppData\Roaming\Telegram Desktop\photo_2025-05-01_00-47-39.jpg" alt="РОЖДЕНИЯ" style="width:120px; height:auto; object-fit: cover; border-radius: 5px; cursor: pointer;" />
+        <img src="c:\Users\HP\AppData\Roaming\Telegram Desktop\photo_2025-05-01_00-47-30.jpg" alt="ЛЮБИМАЯ" style="width:120px; height:auto; object-fit: cover; border-radius: 5px; cursor: pointer;" />
+        <img src="c:\Users\HP\AppData\Roaming\Telegram Desktop\photo_2025-05-01_00-47-24.jpg" alt="МАМОЧКА" style="width:120px; height:auto; object-fit: cover; border-radius: 5px; cursor: pointer;" />
+    </div>
+</div>
+    
+        <script>
+            function playAudio(id) {
+                const allAudios = document.querySelectorAll('audio');
+                allAudios.forEach(audio => {
+                    audio.pause();
+                    audio.currentTime = 0; // Сбрасываем время на начало
+                });
+    
+                const audioElement = document.getElementById(id);
+                audioElement.play();
+            }
+            function checkAnswer(choice) {
+            const resultDiv = document.getElementById('quiz-result');
+
+            if (choice === 3) {
+                resultDiv.innerHTML = 'Поздравляю! Ваш приз: ПАРООЧИСТИТЕЛЬ!!!';
+            } else {
+                resultDiv.innerHTML = 'Попробуй ещё';
+                photoResultDiv.innerHTML = ''; // Очистить предыдущий результат
+            }
+        }
+    </script>
+</body>
+</html>
